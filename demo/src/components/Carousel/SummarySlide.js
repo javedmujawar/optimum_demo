@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import React from "react";
 import axios from "axios";
-//import "./SummarySlide.css";
 
 const SummarySlide = ({ answers, steps }) => {
   const icons = ["👍", "🤔", "👎"];

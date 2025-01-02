@@ -21,7 +21,6 @@ const Carousel = ({ steps }) => {
   };
 
   const handleSelectOption = (label) => {
-    console.log(label);
     setAnswers({ ...answers, [currentStep]: label });
     // if (currentStep < steps.length - 1)
     setCurrentStep(currentStep + 1);

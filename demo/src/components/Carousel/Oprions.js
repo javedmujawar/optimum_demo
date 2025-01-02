@@ -14,7 +14,7 @@ const Oprions = (props) => {
               key={index}
             >
               {item.icon}
-              <span class="tooltiptext">{item.label}.</span>
+              <span className="tooltiptext">{item.label}.</span>
             </span>
           );
         })}
