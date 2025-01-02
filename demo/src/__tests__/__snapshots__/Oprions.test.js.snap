@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Oprions Component matches the snapshot 1`] = `
+<div>
+  <div>
+    <span
+      class="icon"
+    >
+      🌟
+      <span
+        class="tooltiptext"
+      >
+        Star
+        .
+      </span>
+    </span>
+    <span
+      class="icon"
+    >
+      🔥
+      <span
+        class="tooltiptext"
+      >
+        Fire
+        .
+      </span>
+    </span>
+    <span
+      class="icon"
+    >
+      💧
+      <span
+        class="tooltiptext"
+      >
+        Water
+        .
+      </span>
+    </span>
+  </div>
+</div>
+`;

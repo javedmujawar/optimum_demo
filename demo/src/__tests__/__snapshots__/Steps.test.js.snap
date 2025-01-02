@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Step Component matches the snapshot 1`] = `
+<div>
+  <div
+    class="carousel-item activeItem"
+  >
+    <div>
+      <h1>
+        Step Title
+      </h1>
+    </div>
+    <div />
+  </div>
+</div>
+`;

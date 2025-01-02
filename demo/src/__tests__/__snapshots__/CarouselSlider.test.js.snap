@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouselSlider Component matches the snapshot 1`] = `
+<div>
+  <div
+    class="carouselSliderMain"
+  >
+    <div
+      class="carousel-slide active"
+    >
+      <div
+        class="options"
+      />
+    </div>
+    <div
+      class="carousel-slide "
+    >
+      <div
+        class="options"
+      />
+    </div>
+    <div
+      class="carousel-slide "
+    >
+      <div
+        class="options"
+      />
+    </div>
+  </div>
+</div>
+`;
