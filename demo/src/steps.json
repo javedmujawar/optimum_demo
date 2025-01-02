@@ -1,0 +1,27 @@
+[
+    {
+      "title": "How was your week overall? 1",
+      "options": [
+        { "icon": "👍", "label": "Good" },
+        { "icon": "🤔", "label": "Neutral" },
+        { "icon": "👎", "label": "Bad" }
+      ]
+    },
+    {
+        "title": "How was your week overall? 2 ",
+        "options": [
+          { "icon": "👍", "label": "Good" },
+          { "icon": "🤔", "label": "Neutral" },
+          { "icon": "👎", "label": "Bad" }
+        ]
+    },
+    {
+        "title": "How was your week overall? 3",
+        "options": [
+          { "icon": "👍", "label": "Good" },
+          { "icon": "🤔", "label": "Neutral" },
+          { "icon": "👎", "label": "Bad" }
+        ]
+      }
+  ]
+  
