@@ -1,6 +1,6 @@
 [
     {
-      "title": "How was your week overall? 1",
+      "title": "How was your week overall?",
       "options": [
         { "icon": "👍", "label": "Good" },
         { "icon": "🤔", "label": "Neutral" },
@@ -8,7 +8,7 @@
       ]
     },
     {
-        "title": "How was your week overall? 2 ",
+        "title": "How satisfied were you with your work-life balance this week?",
         "options": [
           { "icon": "👍", "label": "Good" },
           { "icon": "🤔", "label": "Neutral" },
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "title": "How was your week overall? 3",
+        "title": "Did you feel connected with others this week?",
         "options": [
           { "icon": "👍", "label": "Good" },
           { "icon": "🤔", "label": "Neutral" },

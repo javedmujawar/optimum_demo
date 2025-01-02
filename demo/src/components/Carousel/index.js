@@ -33,7 +33,7 @@ const Carousel = ({ steps }) => {
         <div className="carousel-container">
           <div className="carousel-track">
             {steps.map((step, index) => (
-              <Step key={index} {...step} onNext={handleSelectOption} />
+                <Step key={index} {...step} onNext={handleSelectOption} index={index} currentStep={currentStep}/>
             ))}
             <CarouselSlider
               steps={steps}
