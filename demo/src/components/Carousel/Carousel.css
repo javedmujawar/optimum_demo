@@ -26,13 +26,13 @@
   height: 100%; /* Match container height */
   display: none;
 }
-.carousel-item > div{
+.carousel-item > div {
   animation: slideInBottomToTop 0.5s ease-out;
 }
-.carousel-item h1{
+.carousel-item h1 {
   width: 70%;
 }
-.activeItem{
+.activeItem {
   display: flex;
 }
 .carousel-track {
@@ -123,16 +123,15 @@
   align-items: center;
   flex-direction: column;
 }
-.summary-slide ul{
+.summary-slide ul {
   list-style: none;
   color: aqua;
   text-align: left;
 }
-.summary-slide h2{
+.summary-slide h2 {
   color: #fff;
   margin: 0;
 }
-
 
 .carouselSliderMain {
   position: relative;
@@ -155,21 +154,37 @@
   margin: 6px;
   cursor: pointer;
 }
-.carousel-slide.active{
+.carousel-slide.active {
   background-color: #fff;
 }
-.icon{
+.icon {
   font-size: 50px;
   cursor: pointer;
   margin: 0 10px;
 }
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+.icon {
+  position: relative;
+  display: inline-block;
+}
+
+.icon .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: green;
+  color: lightgreen;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 14px;
+  top: -35px;
+  left: -10px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.icon:hover .tooltiptext {
+  visibility: visible;
 }
 
 @keyframes slideInBottomToTop {

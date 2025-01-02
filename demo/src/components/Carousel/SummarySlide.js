@@ -1,15 +1,27 @@
+import { useEffect } from "react";
 import React from "react";
+import axios from "axios";
 //import "./SummarySlide.css";
 
 const SummarySlide = ({ answers, steps }) => {
-  console.log(answers, steps)
+  const icons = ["👍", "🤔", "👎"];
+  useEffect(() => {
+    axios
+      .post("apiendPoint", answers)
+      .then((res) => {
+        console.log("data saved.");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="summary-slide">
       <h2>Summary</h2>
       <ul>
         {steps.map((step, index) => (
           <li key={index}>
-            {step.title}: {answers[index] || ""}
+            {step.title}: {icons[answers[index] ]|| ""}
           </li>
         ))}
       </ul>
