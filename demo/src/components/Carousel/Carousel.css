@@ -127,9 +127,15 @@
   height: 12px;
   border-radius: 12px;
   margin: 6px;
+  cursor: pointer;
 }
 .carousel-slide.active{
   background-color: #fff;
+}
+.icon{
+  font-size: 50px;
+  cursor: pointer;
+  margin: 0 10px;
 }
 @keyframes slideInLeft {
   from {

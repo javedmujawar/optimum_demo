@@ -1,47 +1,51 @@
 import React, { useState } from "react";
 import Step from "./Step";
-import CarouselSlider from "./CarouselSlider"
+import SummarySlide from "./SummarySlide";
+import CarouselSlider from "./CarouselSlider";
 import "./Carousel.css";
 
 const Carousel = ({ steps }) => {
-    const [currentStep, setCurrentStep] = useState(0);
-    const [answers, setAnswers] = useState({});
+  const [currentStep, setCurrentStep] = useState(0);
+  const [answers, setAnswers] = useState({});
 
-    const handleNext = () => {
-      if (currentStep < steps.length - 1) {
-        setCurrentStep(currentStep + 1);
-      }
-    };
-  
-    const handlePrev = () => {
-      if (currentStep > 0) {
-        setCurrentStep(currentStep - 1);
-      }
-    };
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1);
+    }
+  };
 
+  const handlePrev = () => {
+    if (currentStep > 0) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
 
-  const handleSelectOption = (stepIndex, option) => {
-    setAnswers({ ...answers, [stepIndex]: option });
-    if (currentStep < steps.length - 1) setCurrentStep(currentStep + 1);
+  const handleSelectOption = (label) => {
+    console.log(label);
+    setAnswers({ ...answers, [currentStep]: label });
+    // if (currentStep < steps.length - 1)
+    setCurrentStep(currentStep + 1);
   };
 
   return (
-    <div className="carousel-container">
-      
-      <div class="carousel-track" style={{
-          transform: `translateX(-${currentStep * 100}%)`,
-          transition: "transform 0.5s ease-in-out",
-        }}>
-        {steps.map((step, index) => (
-          <Step key={index} {...step} onNext={handleNext} />
-        ))}
-        <CarouselSlider
-        steps={steps}
-        currentStep={currentStep}
-        onSelectOption={handleSelectOption}
-      />
-      </div>
-    </div>
+    <>
+      {steps && currentStep < steps.length ? (
+        <div className="carousel-container">
+          <div className="carousel-track">
+            {steps.map((step, index) => (
+              <Step key={index} {...step} onNext={handleSelectOption} />
+            ))}
+            <CarouselSlider
+              steps={steps}
+              currentStep={currentStep}
+              onSelectOption={handleNext}
+            />
+          </div>
+        </div>
+      ) : (
+        <SummarySlide answers ={answers} steps={steps}/>
+      )}
+    </>
   );
 };
 

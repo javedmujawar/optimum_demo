@@ -1,12 +1,10 @@
 const Oprions = (props) => {
-  const { data } = props;
-  console.log(props);
-
+  const { data,onNext } = props;
   return (
     <div>
       {data &&
-        data.map((item) => {
-          return <span>{item.icon}</span>;
+        data.map((item,index) => {
+          return <span className="icon" onClick={()=>{onNext(index)}} key={index}>{item.icon}</span>;
         })}
     </div>
   );
