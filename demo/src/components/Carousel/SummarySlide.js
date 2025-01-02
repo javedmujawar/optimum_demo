@@ -15,6 +15,7 @@ const SummarySlide = ({ answers, steps }) => {
         console.log(err);
       });
   }, []);
+  
   return (
     <div className="summary-slide">
       <h2>Summary</h2>

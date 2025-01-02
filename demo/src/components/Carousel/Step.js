@@ -4,7 +4,6 @@ const Step = (props) => {
 
   return (
     <div className={`carousel-item ${index === currentStep ? "activeItem" : ""}`}>
-    
       <div>
         <h1>{title}</h1>
       </div>
