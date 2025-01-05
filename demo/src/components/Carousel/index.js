@@ -5,6 +5,7 @@ import CarouselSlider from "./CarouselSlider";
 import "./Carousel.css";
 
 const Carousel = ({ steps }) => {
+  const { questions, options } = steps[0];
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState({});
 
@@ -14,11 +15,6 @@ const Carousel = ({ steps }) => {
     }
   };
 
-  const handlePrev = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
 
   const handleSelectOption = (label) => {
     setAnswers({ ...answers, [currentStep]: label });
@@ -28,7 +24,7 @@ const Carousel = ({ steps }) => {
 
   return (
     <>
-      {steps && currentStep < steps.length ? (
+      {questions && currentStep < questions.length ? (
         <>
           <div className="carouselSliderMainBackground">
             <div></div>
@@ -36,17 +32,18 @@ const Carousel = ({ steps }) => {
           </div>
           <div className="carousel-container">
             <div className="carousel-track">
-              {steps.map((step, index) => (
+              {questions.map((step, index) => (
                 <Step
                   key={index}
-                  {...step}
+                  question={step}
                   onNext={handleSelectOption}
                   index={index}
                   currentStep={currentStep}
+                  options={options}
                 />
               ))}
               <CarouselSlider
-                steps={steps}
+                steps={questions}
                 currentStep={currentStep}
                 onSelectOption={handleNext}
               />
@@ -54,7 +51,7 @@ const Carousel = ({ steps }) => {
           </div>
         </>
       ) : (
-        <SummarySlide answers={answers} steps={steps} />
+        <SummarySlide answers={answers} steps={questions} options={options} />
       )}
     </>
   );

@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import React from "react";
 import axios from "axios";
 
-const SummarySlide = ({ answers, steps }) => {
-  const icons = ["👍", "🤔", "👎"];
+const SummarySlide = ({ answers, steps, options }) => {
   useEffect(() => {
     axios
       .post("apiendPoint", answers)
@@ -13,15 +12,16 @@ const SummarySlide = ({ answers, steps }) => {
       .catch((err) => {
         console.log(err);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   return (
     <div className="summary-slide">
       <h2>Summary</h2>
       <ul>
         {steps.map((step, index) => (
           <li key={index}>
-            {step.title}: {icons[answers[index] ]|| ""}
+            {step}: {options[answers[index]].icon || ""}
           </li>
         ))}
       </ul>

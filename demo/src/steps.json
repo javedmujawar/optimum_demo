@@ -1,27 +1,14 @@
 [
-    {
-      "title": "How was your week overall?",
-      "options": [
-        { "icon": "👍", "label": "Good" },
-        { "icon": "🤔", "label": "Neutral" },
-        { "icon": "👎", "label": "Bad" }
-      ]
-    },
-    {
-        "title": "How satisfied were you with your work-life balance this week?",
-        "options": [
-          { "icon": "👍", "label": "Good" },
-          { "icon": "🤔", "label": "Neutral" },
-          { "icon": "👎", "label": "Bad" }
-        ]
-    },
-    {
-        "title": "Did you feel connected with others this week?",
-        "options": [
-          { "icon": "👍", "label": "Good" },
-          { "icon": "🤔", "label": "Neutral" },
-          { "icon": "👎", "label": "Bad" }
-        ]
-      }
-  ]
-  
+  {
+    "questions": [
+      "How was your week overall?",
+      "How satisfied were you with your work-life balance this week?",
+      "Did you feel connected with others this week?"
+    ],
+    "options": [
+      { "icon": "👍", "label": "Good" },
+      { "icon": "🤔", "label": "Neutral" },
+      { "icon": "👎", "label": "Bad" }
+    ]
+  }
+]

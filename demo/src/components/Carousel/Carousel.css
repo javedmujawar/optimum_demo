@@ -21,11 +21,11 @@
 }
 
 .carousel-item {
-  flex: 0 0 100%; /* Each item takes 100% of the container width */
+  flex: 0 0 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* Match container height */
+  height: 100%; 
   display: none;
   justify-content: space-around;
 }
@@ -34,40 +34,39 @@
 }
 .carousel-item h1 {
   width: 70%;
+  color: #fff;
 }
 .activeItem {
   display: flex;
 }
 .carousel-track,
 .carouselSliderMainBackground {
-  display: flex; /* Enable flexbox layout for the carousel */
-  width: 100%; /* Full width for the container */
-  overflow: hidden; /* Hide overflowing content */
-  height: 100vh; /* Optional: Full viewport height */
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+.carousel-track {
   transition: transform 0.5s ease-in-out;
 }
-
-.carouselSliderMainBackground > div , .carousel-item > div{
-  flex: 1; /* Each child takes equal space */
+.carouselSliderMainBackground > div,
+.carousel-item > div {
+  flex: 1;
   display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
 .carouselSliderMainBackground > div:nth-child(1) {
-  background-color: #4f46e5; /* Example: Left section with a background color */
-  color: white; /* Text color for contrast */
+  background-color: #4f46e5; 
+  color: white; 
 }
 
 .carouselSliderMainBackground > div:nth-child(2) {
-  background-color: #f3f4f6; /* Example: Right section with a light background */
+  background-color: #f3f4f6; 
 }
 
-/* PollForm.css */
-.poll-form {
-  display: flex;
-}
 
 .side-panel {
   width: 25%;
@@ -87,25 +86,6 @@
   font-weight: bold;
 }
 
-/* Carousel.css */
-/* .carousel {
-    position: relative;
-    overflow: hidden;
-    width: 75%;
-  }
-  
-  .carousel-slide {
-    position: absolute;
-    width: 100%;
-    transition: transform 0.5s ease-in-out;
-    opacity: 0;
-  }
-  
-  .carousel-slide.active {
-    transform: translateY(0);
-    opacity: 1;
-  } */
-
 .option {
   display: inline-block;
   margin: 10px;
@@ -117,7 +97,6 @@
   transform: scale(1.2);
 }
 
-/* SummarySlide.css */
 .summary-slide {
   background-color: #4f46e5;
   animation: slideInBottomToTop 0.5s ease-out;
@@ -182,7 +161,6 @@
   font-size: 14px;
   top: -35px;
   left: -10px;
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }

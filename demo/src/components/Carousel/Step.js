@@ -1,11 +1,13 @@
 import Oprions from "./Oprions";
 const Step = (props) => {
-  const { title, options,onNext, index , currentStep } = props;
+  const { question, options, onNext, index, currentStep } = props;
 
   return (
-    <div className={`carousel-item ${index === currentStep ? "activeItem" : ""}`}>
+    <div
+      className={`carousel-item ${index === currentStep ? "activeItem" : ""}`}
+    >
       <div>
-        <h1>{title}</h1>
+        <h1>{question}</h1>
       </div>
       <div>
         <Oprions data={options} onNext={onNext} />
