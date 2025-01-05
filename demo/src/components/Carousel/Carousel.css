@@ -10,6 +10,8 @@
   overflow: hidden; /* Hides overflowing content */
   width: 100%; /* Ensures the carousel takes full width */
   height: 100vh; /* Optional: Full viewport height */
+  position: absolute;
+  top: 0;
 }
 
 .carousel-track {
@@ -25,6 +27,7 @@
   justify-content: center;
   height: 100%; /* Match container height */
   display: none;
+  justify-content: space-around;
 }
 .carousel-item > div {
   animation: slideInBottomToTop 0.5s ease-out;
@@ -35,7 +38,8 @@
 .activeItem {
   display: flex;
 }
-.carousel-track {
+.carousel-track,
+.carouselSliderMainBackground {
   display: flex; /* Enable flexbox layout for the carousel */
   width: 100%; /* Full width for the container */
   overflow: hidden; /* Hide overflowing content */
@@ -43,7 +47,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item > div {
+.carouselSliderMainBackground > div , .carousel-item > div{
   flex: 1; /* Each child takes equal space */
   display: flex;
   align-items: center; /* Centers content vertically */
@@ -51,12 +55,12 @@
   height: 100vh;
 }
 
-.carousel-item > div:nth-child(1) {
+.carouselSliderMainBackground > div:nth-child(1) {
   background-color: #4f46e5; /* Example: Left section with a background color */
   color: white; /* Text color for contrast */
 }
 
-.carousel-item > div:nth-child(2) {
+.carouselSliderMainBackground > div:nth-child(2) {
   background-color: #f3f4f6; /* Example: Right section with a light background */
 }
 

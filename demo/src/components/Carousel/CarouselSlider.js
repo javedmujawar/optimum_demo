@@ -4,6 +4,7 @@ import "./Carousel.css";
 const CarouselSlider = ({ steps, currentStep, onSelectOption }) => {
   return (
     <div className="carouselSliderMain">
+      
       {steps.map((step, index) => (
         <div
           key={index}

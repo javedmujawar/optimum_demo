@@ -29,20 +29,32 @@ const Carousel = ({ steps }) => {
   return (
     <>
       {steps && currentStep < steps.length ? (
-        <div className="carousel-container">
-          <div className="carousel-track">
-            {steps.map((step, index) => (
-                <Step key={index} {...step} onNext={handleSelectOption} index={index} currentStep={currentStep}/>
-            ))}
-            <CarouselSlider
-              steps={steps}
-              currentStep={currentStep}
-              onSelectOption={handleNext}
-            />
+        <>
+          <div className="carouselSliderMainBackground">
+            <div></div>
+            <div></div>
           </div>
-        </div>
+          <div className="carousel-container">
+            <div className="carousel-track">
+              {steps.map((step, index) => (
+                <Step
+                  key={index}
+                  {...step}
+                  onNext={handleSelectOption}
+                  index={index}
+                  currentStep={currentStep}
+                />
+              ))}
+              <CarouselSlider
+                steps={steps}
+                currentStep={currentStep}
+                onSelectOption={handleNext}
+              />
+            </div>
+          </div>
+        </>
       ) : (
-        <SummarySlide answers ={answers} steps={steps}/>
+        <SummarySlide answers={answers} steps={steps} />
       )}
     </>
   );
