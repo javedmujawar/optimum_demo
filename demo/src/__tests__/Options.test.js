@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Oprions from "../components/Carousel/Oprions";
+import Oprions from "../components/Carousel/Options";
 
 describe("Oprions Component", () => {
   const mockOnNext = jest.fn();

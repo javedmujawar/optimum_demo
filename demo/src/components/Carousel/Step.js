@@ -1,4 +1,4 @@
-import Oprions from "./Oprions";
+import Oprions from "./Options";
 const Step = (props) => {
   const { question, options, onNext, index, currentStep } = props;
 
